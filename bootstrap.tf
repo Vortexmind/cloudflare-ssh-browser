@@ -18,7 +18,6 @@ provider "digitalocean" {
 provider "cloudflare" {
   api_token = var.cloudflare_api_token
   account_id = var.cloudflare_account_id
-  api_client_logging = true
 }
 
 locals {
