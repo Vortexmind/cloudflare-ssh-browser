@@ -1,0 +1,21 @@
+# Digitalocean Configuration
+digitalocean_token = ""
+digitalocean_droplet_image = "ubuntu-20-04-x64"
+digitalocean_droplet_region = "lon1"
+digitalocean_droplet_size = "s-1vcpu-1gb"
+digitalocean_key_name = ""
+digitalocean_priv_key_path = ""
+
+# Cloudflare Configuration
+cloudflare_domain = ""
+cloudflare_account_id = ""
+cloudflare_tunnel_secret = ""
+cloudflare_cname_record = ""
+cloudflare_api_token = ""
+
+# Github Configuration
+github_oauth_client_id = ""
+github_oauth_client_secret = ""
+
+# SSH authorized user
+user_email = ""
