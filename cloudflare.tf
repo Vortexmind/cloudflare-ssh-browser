@@ -52,3 +52,8 @@ resource "cloudflare_access_identity_provider" "github_oauth" {
     client_secret = var.github_oauth_client_secret
   }
 }
+
+resource "cloudflare_access_ca_certificate" "ssh_short_lived" {
+  account_id     = var.cloudflare_account_id
+  application_id = cloudflare_access_application.ssh_browser.id
+}

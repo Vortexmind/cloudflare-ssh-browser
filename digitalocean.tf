@@ -24,6 +24,7 @@ resource "digitalocean_droplet" "ssh_droplet" {
       cloudflare_tunnel_id = cloudflare_argo_tunnel.ssh_browser.id
       cloudflare_tunnel_name = cloudflare_argo_tunnel.ssh_browser.name
       cloudflare_tunnel_secret = cloudflare_argo_tunnel.ssh_browser.secret
+      trusted_pub_key = cloudflare_access_ca_certificate.ssh_short_lived.public_key
       user = local.user_from_mail
   })
 

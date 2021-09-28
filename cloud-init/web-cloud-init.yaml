@@ -35,3 +35,8 @@ runcmd:
 - cloudflared service install
 - systemctl start cloudflared
 - systemctl enable cloudflared
+- touch /etc/ssh/ca.pub
+- echo -n "${trusted_pub_key}" >> /etc/ssh/ca.pub
+- echo "PubkeyAuthentication yes" >> /etc/ssh/sshd_config
+- echo "TrustedUserCAKeys /etc/ssh/ca.pub" >> /etc/ssh/sshd_config
+- systemctl restart ssh
